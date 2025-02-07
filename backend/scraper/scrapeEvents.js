@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const { v4: uuidv4 } = require('uuid');
 require("dotenv").config();
 
 const fetchEvents = async () => {
@@ -12,7 +13,8 @@ const fetchEvents = async () => {
         const parsedData = JSON.parse(jsonData);
 
         if (parsedData) {
-            const events = parsedData.itemListElement.map(({item}) => ({
+            const events = parsedData.itemListElement.map(({ item }) => ({
+                id: uuidv4(),
                 startDate: item.startDate,
                 endDate: item.endDate,
                 url: item.url,
