@@ -21,6 +21,7 @@ const fetchEvents = async () => {
                 description: item.description, 
                 location: item.location, 
                 image: item.image, 
+                name: item.name, 
             }));
             return events;
         }
