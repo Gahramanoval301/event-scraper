@@ -17,7 +17,7 @@ const SingleEvent = (props: IEvent) => {
             <Box mt={2} >
                 <Badge />
                 <DateInfo startDate={startDate} endDate={endDate} />
-                <Typography className=".max-2-line-text" fontWeight={600} color="primary" mt={1} sx={{minHeight:"50px"}}>{name}</Typography>
+                <Typography className="max-2-line-text" fontWeight={600} color="primary" mt={1} sx={{minHeight:"50px"}}>{name}</Typography>
             </Box>
             <Box mt={1} >
                 <Box>
